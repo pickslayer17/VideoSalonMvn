@@ -1,5 +1,3 @@
-import javax.imageio.IIOException;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -58,11 +56,9 @@ public class VideoSalonApp {
                 case 5:
                     System.exit(0);
                 default:
+            }
         }
-
-
-        }
-
 
     }
+
 }
