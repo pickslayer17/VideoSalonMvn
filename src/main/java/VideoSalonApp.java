@@ -1,11 +1,20 @@
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
+
 public class VideoSalonApp {
+    public static Path path = Paths.get("src/main/java/VideoTapes.txt");
 
     public final static String VIDEO_TAPES_FILE_NAME = "src/main/java/VideoTapes.txt";
 
     public static void main(String[] args) throws IOException {
+
+        System.out.println(path);
+        System.out.println(path.toAbsolutePath());
+        System.out.println(path.toRealPath());
+
 
         VideoSalon videoSalon = new VideoSalon(VIDEO_TAPES_FILE_NAME, "Kupalinka");
         System.out.println("Welcome to our video salon \"" + videoSalon.getSalonName() + "\"!");

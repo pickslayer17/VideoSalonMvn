@@ -13,9 +13,18 @@ public class VideoSalonJsonParser {
 
     }
 
+    public List<VideoTape> getVideoTapeListFromJson(String jsonList) throws IOException {
+        return  mapper.readValue(jsonList, new TypeReference<List<VideoTape>>(){});
+    }
+
+    public String convertVideoTapeListToJson(List<VideoTape> videoTapeList) throws IOException {
+        mapper.writeValue(writer, videoTapeList);
+        return writer.toString();
+    }
+
     public  List<VideoTape> readJsonListFromFile(File file) throws IOException {
        Scanner scanner = new Scanner(file);
-        StringBuilder stringBuilder = new StringBuilder();
+       StringBuilder stringBuilder = new StringBuilder();
        while(scanner.hasNextLine()){
            stringBuilder.append(scanner.nextLine());
        }

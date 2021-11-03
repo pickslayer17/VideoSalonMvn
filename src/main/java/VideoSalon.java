@@ -3,6 +3,7 @@ import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class VideoSalon {
     private File videoTapesFile;
@@ -20,9 +21,29 @@ public class VideoSalon {
         readTapesFromFile();
     }
 
+
+
     private void readTapesFromFile() throws  IOException{
         videoTapeList = videoSalonJsonParser.readJsonListFromFile(videoTapesFile);
+
+        videoTapeList = readTapesFromFile(videoTapesFile);
     }
+
+    private void writeTapesToFile(File file) {
+
+    }
+    private List<VideoTape> readTapesFromFile(File videoTapesFile) throws FileNotFoundException {
+        List<VideoTape> videoTapeList = new ArrayList<>();
+        Scanner scanner = new Scanner(videoTapesFile);
+        StringBuilder stringBuilder = new StringBuilder();
+        while(scanner.hasNextLine()){
+            stringBuilder.append(scanner.nextLine());
+        }
+
+
+        return videoTapeList;
+    }
+
 
     private void updateFile()  {
         try {
