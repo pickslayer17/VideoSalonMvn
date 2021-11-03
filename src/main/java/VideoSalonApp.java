@@ -1,3 +1,5 @@
+import javax.imageio.IIOException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -65,9 +67,11 @@ public class VideoSalonApp {
                 case 5:
                     System.exit(0);
                 default:
-            }
         }
 
-    }
 
+        }
+
+
+    }
 }

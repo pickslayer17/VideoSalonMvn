@@ -38,6 +38,11 @@ public class VideoTape {
         return clientName;
     }
 
+    public LocalDateTime getRentDate() {
+        
+
+        return rentDate;
+    }
 
     @JsonIgnore
     public String getRendDateString(){

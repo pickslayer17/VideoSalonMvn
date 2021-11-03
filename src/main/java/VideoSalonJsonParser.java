@@ -1,13 +1,16 @@
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class VideoSalonJsonParser {
 
-    private ObjectMapper mapper = new ObjectMapper();
-    private StringWriter writer = new StringWriter();
+    ObjectMapper mapper = new ObjectMapper();
+    StringWriter writer = new StringWriter();
 
     public VideoSalonJsonParser() {
 
@@ -42,5 +45,6 @@ public class VideoSalonJsonParser {
        }
 
    }
+
 
 }
